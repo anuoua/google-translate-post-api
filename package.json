@@ -1,6 +1,6 @@
 {
   "name": "google-translate-post-api",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "google translate post api",
   "main": "index.js",
   "scripts": {
