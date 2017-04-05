@@ -84,7 +84,7 @@ function translate(text, opts) {
                 result.raw = body;
             }
             body[0].forEach(function (obj) {
-                if (obj[0] !== undefined) {
+                if (obj[0] != null) {
                     result.text += obj[0];
                 }
             });
@@ -96,7 +96,7 @@ function translate(text, opts) {
                 result.from.language.iso = body[8][0][0];
             }
 
-            if (body[7] !== undefined && body[7][0] !== undefined) {
+            if (body[7] != null && body[7][0] != null) {
                 var str = body[7][0];
 
                 str = str.replace(/<b><i>/g, '[');
@@ -113,14 +113,7 @@ function translate(text, opts) {
 
             return result;
         }).catch(function (err) {
-            var e;
-            e = new Error();
-            if (err.statusCode !== undefined && err.statusCode !== 200) {
-                e.code = 'BAD_REQUEST';
-            } else {
-                e.code = 'BAD_NETWORK';
-            }
-            throw e;
+            throw err;
         });
     });
 }

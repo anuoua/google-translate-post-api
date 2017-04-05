@@ -4,8 +4,8 @@ describe('test request', () => {
     it('test request 1', done => {
         Promise
             .race([
-                translate('I spea Dutch!', {from: 'en', to: 'zh-CN', cncom: 'cn'}),
-                translate('I spea Dutch!', {from: 'en', to: 'zh-CN'})
+                translate('hello', {from: 'en', to: 'zh-CN', cncom: 'cn'}),
+                translate('hello', {from: 'en', to: 'zh-CN'})
             ])
             .then(res => {
                 console.log(res.text)
