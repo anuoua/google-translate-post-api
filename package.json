@@ -25,7 +25,7 @@
   "homepage": "https://github.com/anuoua/google-translate-post-api#readme",
   "dependencies": {
     "chai": "^3.5.0",
-    "google-translate-cn-token": "^1.0.1",
+    "google-translate-cn-token": "^1.0.2",
     "mocha": "^3.2.0",
     "node-fetch": "^1.6.3",
     "safe-eval": "^0.3.0"
