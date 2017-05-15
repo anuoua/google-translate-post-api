@@ -4,7 +4,7 @@
   "description": "google translate post api",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --compilers js:babel-register index.spec.js",
+    "test": "mocha --compilers js:babel-register index.spec.js -t 10000",
     "test:watch": "npm test -- --watch"
   },
   "repository": {

@@ -40,10 +40,10 @@ function translate(text, opts) {
             dt: ['at', 'bd', 'ex', 'ld', 'md', 'qca', 'rw', 'rm', 'ss', 't'],
             ie: 'UTF-8',
             oe: 'UTF-8',
-            source: 'bh',
-            ssel: 0,
+            source: 'btn',
+            ssel: 3,
             tsel: 0,
-            kc: 1,
+            kc: 0,
         };
         data[token.name] = token.value;
 
@@ -53,13 +53,14 @@ function translate(text, opts) {
             url: url,
             text: text
         }
-
-        // return url + '?' + querystring.stringify(data);
     }).then(function (data) {
         return fetch(data.url, {
             method: 'POST',
             timeout: 10000,
-            body: `q=${encodeURIComponent(data.text)}`
+            body: `q=${encodeURIComponent(data.text)}`,
+            header: {
+                'Accept-Language': 'en'
+            }
         })
         .then(res => res.text())
         .then(function (res) {

@@ -20,9 +20,9 @@ const translate = require('google-translate-post-api');
 
 translate('你好', {from: 'zh-cn', to: 'en', cncom: 'cn', raw: true}).then(res => {
     console.log(res.text);
-    //=> I speak English
+    //=> hello
     console.log(res.from.language.iso);
-    //=> nl
+    //=> zh-cn
 }).catch(err => {
     console.error(err);
 });
