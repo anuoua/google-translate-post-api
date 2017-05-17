@@ -58,8 +58,11 @@ function translate(text, opts) {
             method: 'POST',
             timeout: 10000,
             body: `q=${encodeURIComponent(data.text)}`,
-            header: {
-                'Accept-Language': 'en'
+            headers: {
+				"Accept": "*/*",
+				"Accept-Encoding": "gzip, deflate, br",
+				"Accept-Language": "zh-CN,zh;q=0.8,en;q=0.6",
+				"Content-Type": "application/x-www-form-urlencoded;charset=UTF-8"
             }
         })
         .then(res => res.text())

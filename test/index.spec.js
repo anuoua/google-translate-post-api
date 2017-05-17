@@ -1,4 +1,5 @@
-import translate, { languages } from './index'
+const translate = require('../index')
+const assert = require('assert')
 
 describe('test request', () => {
     it('test request 1', done => {
@@ -8,9 +9,9 @@ describe('test request', () => {
                 translate('hello', {from: 'en', to: 'zh-CN'})
             ])
             .then(res => {
-                console.log(res.text)
-                console.log(res.from.language.iso)
-                console.log(res.from.text.didYouMean);
+                assert(res.text === '你好')
+                assert(res.from.language.iso === 'en')
+                assert(res.from.text.didYouMean === false)
                 done()
             }).catch(err => {
                 done(err)
