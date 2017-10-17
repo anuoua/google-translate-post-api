@@ -1,4 +1,5 @@
-# google-translate-post-api
+# google-translate-post-api [![Build Status](https://travis-ci.org/anuoua/google-translate-post-api.svg?branch=master)](https://travis-ci.org/anuoua/google-translate-post-api)
+
 google translate post api
 
 ## Features 
